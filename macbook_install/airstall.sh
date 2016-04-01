@@ -3,17 +3,18 @@
 # Logger
 exec 1> >(logger -s -t "Airstall: "$(basename $0)) 2>&1
 
-DOMAIN="example.com"
 PROXYPAC="http://proxy.example.com/proxy.pac" # Proxy setting
-ODSSERVER="ods-01.example.com"
+ODSSERVER="ods-01.example.com" # ODS Server
 NTPSERVER="time.example.com" #NTP server
-TEMP="/Users/Shared/SETUP_TEMP"    # TEMP FOLDER
 
 ROOTPASS="id10t" #root password
 
+# Active Directory
+ADDOMAIN="example.com" # Active Directory Domain
 ADUSER="admin" # Active directory username
 ADPASS="1di0t" # ...and his password
 
+TEMP="/Users/Shared/SETUP_TEMP" # Temp data
 
 echo "Setting time server"$'\n'
 	systemsetup -settimezone Pacific/Auckland
@@ -93,7 +94,7 @@ echo "Adding computer to Active Directory"$'\n'
 	scutil --set LocalHostName $CNAME
 	scutil --set ComputerName $CNAME
 
-	echo "y" | dsconfigad -add $DOMAIN -username $ADUSER -password $ADPASS
+	echo "y" | dsconfigad -add $ADDOMAIN -username $ADUSER -password $ADPASS
 echo "Done."$'\n\n'
 
 

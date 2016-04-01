@@ -3,10 +3,10 @@
 # Logger
 exec 1> >(logger -s -t "Airstall: "$(basename $0)) 2>&1
 
-SETUPL="/Users/Shared/SETUP_FILES" # mount share
-TEMP="/Users/Shared/SETUP_TEMP"    # TEMP FOLDER
+SETUPL="/Users/Shared/SETUP_FILES" # Mount point
+TEMP="/Users/Shared/SETUP_TEMP"    # Temp data
 
-ADDRESS="example.com/macbook_install"
+ADDRESS="example.com/macbook_install" #SMB mount address
 
 ADUSER="admin" # Active directory username
 ADPASS="1di0t" # ...and his password
