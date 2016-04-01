@@ -4,9 +4,9 @@ Macbook setup script
 
 These scripts been made for use with a Apple Remote Desktop.
 
-1: **runme.sh** copies data. So run this over Apple Remote Desktop
+1: [runme.sh](https://github.com/Maupa/Airstall/blob/master/runme.sh) copies data. So run this over Apple Remote Desktop
 
-2: macbook_install/**airstall.sh** does magic.
+2: macbook_install/[airstall.sh](https://github.com/Maupa/Airstall/blob/master/macbook_install/airstall.sh) does magic.
 
 Please read through scripts for better understanding.
 
